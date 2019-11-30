@@ -1,0 +1,183 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+  <script>!function(){function t(){var e,r,n,o,a,i,c=arguments[0]||{},u=1,l=arguments.length,s=!1;for("boolean"==typeof c&&(s=c,c=arguments[1]||{},u=2),"object"!=typeof c&&"function"!==type(c)&&(c={}),l===u&&(c=this,--u);l>u;u++)if(null!=(e=arguments[u]))for(r in e)n=c[r],o=e[r],c!==o&&(s&&o&&(isPlainObject(o)||(a="array"===type(o)))?(a?(a=!1,i=n&&"array"===type(n)?n:[]):i=n&&isPlainObject(n)?n:{},c[r]=t(s,i,o)):void 0!==o&&(c[r]=o));return c}function e(t,e){var r,n=[];for(key in t)n.push(encodeURIComponent(key)+"="+encodeURIComponent(t[key]));return r=n.join("&").replace(/%20/g,"+"),"string"==typeof e&&(r=e+(r.length>0?(e.indexOf("?")<0?"?":"&")+r:"")),r}function r(r,n){var o=new Image;n=t({_tm:new Date-0},n),o.src=e(n,r)}function n(t,e,r){var n=new Date,o=r;n.setTime(n.getTime()+24*o*3600*1e3),document.cookie=t+"="+e+";expires="+n.toGMTString()}function o(t){for(var e,r=document.cookie.replace(/[ ]/g,""),n=r.split(";"),o=0;o<n.length;o++){var a=n[o].split("=");if(t==a[0]){e=a[1];break}}return e}function a(){function t(){return(65536*(1+Math.random())|0).toString(16).substring(1)}return t()+t()+"-"+t()+"-"+t()+"-"+t()+"-"+t()+t()+t()}function i(t){var e=Object.keys(t),r=[];return e.forEach(function(e){r.push(e+"="+t[e])}),r.join("&")}function c(){var t=this;t.statUrl="bccustom://adnfrcpve&",t.comStat={},c=function(){return t}}c.prototype.setComStat=function(e){var r=this;r.comStat=t(r.comStat,e),r.comStat.uuid||(r.comStat.uuid=r.getUnUCUid())},c.prototype.getUnUCUid=function(){var t=location.hostname+"_uid",e="";try{localStorage.getItem(t)||localStorage.setItem(t,a()),e=localStorage.getItem(t)}catch(r){o(t)||n(t,a(),360),e=o(t)}return e},c.prototype.pvStat=function(e){var n=this;e||(e={}),e.lt="log",e.pv_rf=document.referrer;var o=i(t(e,n.comStat));console.log(n.statUrl+o),r(n.statUrl+o)},c.prototype.clickStat=function(e){var n=this;e||(e={}),e.lt="link";var o=i(t(e,n.comStat));console.log(n.statUrl+o),r(n.statUrl+o)},c.prototype.eventStat=function(e){var n=this;e||(e={}),e.lt="event",e.e_c="",e.e_a="touch";var o=i(t(e,n.comStat));console.log(n.statUrl+o),r(n.statUrl+o)},c.prototype.getUrlParam=function(t,e){var r,n=new RegExp("(^|&)"+t+"=([^&]*)(&|$)");return r=e?e.substr(e.indexOf("?")+1).match(n):window.location.search.substr(1).match(n),null!==r?unescape(r[2]):null},window.waStat||(window.waStat=new c),document.addEventListener("click",function(t){for(var e=t.target;e!==t.currentTarget;)try{if("a"===e.tagName.toLowerCase()&&"true"===e.dataset.wa){t.preventDefault();var r=e.href,n={};if(/^ext:/.test(e.href)){var o=r.substring(0,r.indexOf(":http")),a=o.split("-"),i=a[1].split("*");n={fcid:i[0],cid:i[1],pox:3===i.length?i[2]:"",uid:"U"===a[2].substring(0,1).toUpperCase()?a[2].substring(1):"",nid:"N"===a[2].substring(0,1).toUpperCase()?a[2].substring(1):"",title:e.title}}else n=window.waStat.getUrlParam("fcid",e.href)?{fcid:window.waStat.getUrlParam("fcid",e.href),cid:window.waStat.getUrlParam("cid",e.href),nid:window.waStat.getUrlParam("nid",e.href)||"",uid:window.waStat.getUrlParam("uid",e.href)||"",title:e.title}:{url:e.href,title:e.title||""};window.waStat.clickStat(n),setTimeout(function(){location.href=r},200)}e=e.parentNode}catch(t){return void console.error(t.message)}},!1),"undefined"!=typeof module&&module.exports&&(module.exports=window.waStat)}();</script>
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"> 
+  <link rel="stylesheet" type="text/css" href="./zhaopin_files/recruit_00ccade.css"> 
+  <title>招聘频道</title> 
+  <link rel="stylesheet" href="./zhaopin_files/recruit_40b86cb.css">
+      <style>.distouch{font-size:13px;-webkit-touch-callout: none;}</style>
+ </head> 
+ <body data-page="招聘"> 
+  <div id="ref"></div> 
+  <section id="head" class="head head-bg-page"> 
+   <div class="head-content"> 
+    <h1 class="head-title">招聘频道</h1> 
+    <a class="head-home head-bg-page distouch" href="../main.html"></a> 
+    <nav> 
+     <ul class="head-nav">
+      <li class="head-nav-item"><a class="distouch" href="../jiaoyumore/jiaoyu.html" title="教育">教育</a></li>
+      <li class="head-nav-item"><a class="distouch" href="../shequmore/shequ.html" title="社区">社区</a></li>
+      <li class="head-nav-item"><a class="distouch" href="../lvyoumore/lvyou.html" title="旅游">旅游</a></li>
+      <li class="head-nav-item"><a class="distouch" href="../jiankangmore/jiankang.html" title="健康">健康</a></li>
+      <li class="head-nav-item"><a class="distouch" href="../caijingmore/caijing.html" title="财经">财经</a></li>
+      <li class="head-nav-item"><a class="distouch" href="../licaimore/licai.html" title="理财">理财</a></li>
+     </ul> 
+    </nav> 
+   </div> 
+   <img src="./zhaopin_files/406dee7cc9ae9040d60715b42ea52808.png" class="head-bgimg"> 
+  </section> 
+  <section id="tagList"> 
+   <ul class="row com-border-btm"> 
+    <li class="column6 "> <a class="linkList-item font-fix  font-catalog" href="http://stat.hao.uc.cn/stat_site.php?nid=40985&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="地区">地区</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=40986&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="北京">北京</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=40987&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="上海">上海</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=40988&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="广州">广州</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=40989&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="深圳">深圳</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=40990&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="武汉">武汉</a> </li> 
+    <li class="column6 line-between"> <a class="linkList-item font-fix  font-catalog" href="http://stat.hao.uc.cn/stat_site.php?nid=34730&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="职位">职位</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=34731&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="销售">销售</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=34732&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="导购">导购</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=34733&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="服务员">服务员</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=34734&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="保安">保安</a> </li> 
+    <li class="column6 "> <a class="linkList-item font-fix  " href="http://stat.hao.uc.cn/stat_site.php?nid=34735&amp;fcid=542&amp;cid=544&amp;pox=&amp;page=navi_online_pages" title="客服">客服</a> </li> 
+   </ul> 
+  </section> 
+  <section id="zpmz"> 
+   <div class="pos-rel"> 
+    <h2 class="title-theme font-page"> 招聘名站<span class="title-icon bg-page"></span> </h2> 
+   </div> 
+   <ul class="row com-border-btm"> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?uid=88134&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="前程无忧">前程无忧</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=23435&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="智联招聘">智联招聘</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34728&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="赶集招聘">赶集招聘</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=1567&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="58招聘">58招聘</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?uid=97511&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="大街网">大街网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33792&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="猎聘网">猎聘网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=1213&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="中华英才网">中华英才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=10859&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="看准网">看准网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?uid=97806&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="应届生招聘">应届生招聘</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=15550&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="若邻网">若邻网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=10925&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="中国人才热线">中国人才热线</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?uid=92617&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="职友集">职友集</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33793&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="一览英才网">一览英才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=22999&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="百才招聘">百才招聘</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33794&amp;fcid=542&amp;cid=545&amp;pox=&amp;page=navi_online_pages" title="1010兼职网">1010兼职网</a> </li> 
+   </ul> 
+  </section> 
+  <section id="hyzp"> 
+   <div class="pos-rel"> 
+    <h2 class="title-theme font-page"> 行业招聘<span class="title-icon bg-page"></span> </h2> 
+   </div> 
+   <ul class="row com-border-btm"> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33795&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="汽车人招聘网">汽车人招聘网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33796&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="中国服装人才网">中国服装人才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33797&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="游戏人才招聘">游戏人才招聘</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33798&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="138美容人才网">138美容人才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33799&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="北极星电力招聘">北极星电力招聘</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33800&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="丁香医药人才">丁香医药人才</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33801&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="教育英才网">教育英才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33802&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="IT英才网">IT英才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=23059&amp;fcid=542&amp;cid=1803&amp;pox=&amp;page=navi_online_pages" title="化工英才网">化工英才网</a> </li> 
+   </ul> 
+  </section> 
+  <section id="dfzp"> 
+   <div class="pos-rel"> 
+    <h2 class="title-theme font-page"> 地方招聘<span class="title-icon bg-page"></span> </h2> 
+   </div> 
+   <ul class="row com-border-btm"> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=31479&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="揭阳招聘网">揭阳招聘网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33804&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="深圳招聘网">深圳招聘网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33805&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="上海人才网">上海人才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33806&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="首都人才网">首都人才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33807&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="成都人才网">成都人才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33808&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="钱江人才网">钱江人才网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33809&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="重庆汇博人才">重庆汇博人才</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33810&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="南京扬子人才">南京扬子人才</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33811&amp;fcid=542&amp;cid=1804&amp;pox=&amp;page=navi_online_pages" title="关中人才网">关中人才网</a> </li> 
+   </ul> 
+  </section> 
+  <section id="mqzp"> 
+   <div class="pos-rel"> 
+    <h2 class="title-theme font-page"> 名企招聘<span class="title-icon bg-page"></span> </h2> 
+   </div> 
+   <ul class="row com-border-btm"> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33812&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="UC优视">UC优视</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33813&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="中国移动">中国移动</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33814&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="中国电信">中国电信</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33815&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="南方电网">南方电网</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33816&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="中石油">中石油</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33817&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="中石化">中石化</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33818&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="华为">华为</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33819&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="中国银行">中国银行</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33820&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="工商银行">工商银行</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33821&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="CCTV">CCTV</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33822&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="海尔">海尔</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33823&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="万科">万科</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33824&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="阿里巴巴">阿里巴巴</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33825&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="百度">百度</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=33826&amp;fcid=542&amp;cid=1805&amp;pox=&amp;page=navi_online_pages" title="腾讯">腾讯</a> </li> 
+   </ul> 
+  </section> 
+  <section id="rmzw"> 
+   <div class="pos-rel"> 
+    <h2 class="title-theme font-page"> 热门职位<span class="title-icon bg-page"></span> </h2> 
+   </div> 
+   <ul class="row com-border-btm"> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34588&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="包吃住">包吃住</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34589&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="应届生">应届生</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34590&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="销售">销售</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34591&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="导购">导购</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34592&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="营业员">营业员</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34593&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="餐饮">餐饮</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34594&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="厨师">厨师</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34595&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="收银">收银</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34596&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="保洁">保洁</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34597&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="服务员">服务员</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34598&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="技工">技工</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34599&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="工人">工人</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34600&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="司机">司机</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34601&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="客服">客服</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34602&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="快递员">快递员</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34603&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="前台">前台</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34604&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="文员">文员</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34605&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="网络">网络</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34606&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="广告">广告</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34607&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="会计师">会计师</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34736&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="保安">保安</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34737&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="美发师">美发师</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34738&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="经纪人">经纪人</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34821&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="行政">行政</a> </li> 
+    <li class="line-between column5"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34822&amp;fcid=542&amp;cid=1806&amp;pox=&amp;page=navi_online_pages" title="采购">采购</a> </li> 
+   </ul> 
+  </section> 
+  <section id="jzzp"> 
+   <div class="pos-rel"> 
+    <h2 class="title-theme font-page"> 兼职招聘<span class="title-icon bg-page"></span> </h2> 
+   </div> 
+   <ul class="row com-border-btm"> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34608&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="学生兼职">学生兼职</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34609&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="促销导购">促销导购</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34610&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="传单派发">传单派发</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34611&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="钟点工">钟点工</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34612&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="服务员">服务员</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34613&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="化妆师">化妆师</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34614&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="礼仪模特">礼仪模特</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34615&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="艺术老师">艺术老师</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34616&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="生活配送">生活配送</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34617&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="家教">家教</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34618&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="翻译">翻译</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34619&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="会计">会计</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34620&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="问卷调查">问卷调查</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34621&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="网站建设">网站建设</a> </li> 
+    <li class="line-between column3"> <a class="linkList-item font-fix " href="http://stat.hao.uc.cn/stat_site.php?nid=34622&amp;fcid=542&amp;cid=1807&amp;pox=&amp;page=navi_online_pages" title="其他兼职">其他兼职</a> </li> 
+   </ul> 
+  </section> 
+  <div class="footer"> 
+  
+   
+  </div> 
+
+ 
+
+</body></html>
