@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>仿宋</string>
+		<key>path</key>
+		<string>仿宋.ttf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>黑体</string>
+		<key>path</key>
+		<string>黑体.ttf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>楷体</string>
+		<key>path</key>
+		<string>楷体.ttf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>宋体</string>
+		<key>path</key>
+		<string>宋体.ttf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>羿创仿宋</string>
+		<key>path</key>
+		<string>羿创仿宋.ftf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>羿创小隶书</string>
+		<key>path</key>
+		<string>羿创小隶书.ftf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>羿创中黑</string>
+		<key>path</key>
+		<string>羿创中黑.ttf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>羿创中宋</string>
+		<key>path</key>
+		<string>羿创中宋.ftf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>圆体</string>
+		<key>path</key>
+		<string>圆体.ttf</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>SimHei</string>
+		<key>path</key>
+		<string>SimHei.ttf</string>
+	</dict>
+</array>
+</plist>
