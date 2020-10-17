@@ -1,0 +1,39 @@
+.iconList-img {
+    display: block;
+    margin: 0 auto;
+    width: 51px;
+    height: 43px
+}
+.iconList-img1 {
+    display: block;
+    margin: 0 auto;
+    width: 51px;
+    height: 43px
+}
+.iconList-info {
+    color: #adadad
+}
+
+.iconList-tel {
+    display: inline-block;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 15px;
+    font-size: 13px;
+    height: 14px;
+    line-height: 15px;
+    color: #feaf49
+}
+
+.iconList-tel:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 12px;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+    background-image: url(../res/phone.png);
+    background-size: 14px 12px
+}
