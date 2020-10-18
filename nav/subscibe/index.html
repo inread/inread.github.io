@@ -18,8 +18,14 @@
         <a class="head-home head-bg-page distouch" href="../main.html"></a>
         <nav>
           <ul class="head-nav">
-            <li class="head-nav-item"><a class="distouch"
-                href="../newmore/new.html" title="新闻">新闻</a></li>
+            <li class="head-nav-itemf"><a class="distouch"
+                href="./rss/index.html" title="RSS">RSS</a></li>
+            <li class="head-nav-itemf"><a class="distouch"
+                href="./opml/index.html" title="OPML">OPML</a></li>
+            <li class="head-nav-itemf"><a class="distouch"
+                href="./recommend/index.html" title="新闻">推荐</a></li>
+            <li class="head-nav-itemf"><a class="distouch"
+                href="./dynamic/index.html" title="新闻">动态</a></li>
           </ul>
         </nav>
       </div>
@@ -35,9 +41,10 @@
             title="搜狐IT"> 爱范儿 </a> </li>
         <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc27&name=捕蛇者说&url=https://pythonhunter.org/episodes/feed.xml" 
             title="搜狐IT"> 捕蛇者说 </a> </li>
-          <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc27&name=阮一峰的网络日志&url=http://www.ruanyifeng.com/blog/atom.xml" 
+        <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc27&name=阮一峰的网络日志&url=http://www.ruanyifeng.com/blog/atom.xml" 
             title="搜狐IT"> 阮一峰的网络日志 </a> </li>
-            
+        <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc02&name=驱动之家&url=https://rss.mydrivers.com/rss.aspx?Tid=1" 
+            title="少数派"> 驱动之家 </a> </li>
       </ul>
     </section>
 
@@ -50,10 +57,12 @@
             title="搜狐IT"> 华生论坛 </a> </li>
         <li class="line-between column3"> <a class="linkList-item font-fix"href="./files/opml/环球网.opml" 
             title="搜狐IT"> 环球网 </a> </li>
+        <li class="line-between column3"> <a class="linkList-item font-fix"href="../files/opml/chiphell.opml"
+            title="搜狐IT"> CHIPHELL论坛 </a> </li>
       </ul>
     </section>
 
-    <section id="digitalTime">
+    <section id="recommend">
       <div class="pos-rel">
         <h2 class="title-theme font-page" md='使用app内脚本' > 推荐<span class="title-icon bg-page"></span>
         </h2>
@@ -64,45 +73,26 @@
       </ul>
     </section>
 
-    <section id="phoneSite">
+    <section id="dynamic">
       <div class="pos-rel">
         <h2 class="title-theme font-page"> 动态<span class="title-icon bg-page"></span>
         </h2>
       </div>
-      <!-- 组件内容 -->
+
       <ul class="row">
-        <li class="mtop2 column3"> <a class="dis-b"
-            href="vfeed://server/?url=https%3a%2f%2fwww.tianya.cn%2fm%2f&script=bbs_tianya&parser=bbs_tianya&ptype=html&cid=rc04&range=0,100&desc=天涯论坛&name=天涯论坛&u=http%3a%2f%2finread.github.io%2frssappcommon%2fsites%2fbrowser%2fapp%2fpatch%2fbbs_tianya%2f"
-            title="小米"> <img class="iconList-img1"
-              src="./files/11004fdd3891ce44.png"><p class="tex-cent
-              font-fix mtop5">天涯论坛服务脚本主页</p> </a> </li>
-        
+
+        <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://server/?script=tianya&condition=find&cid=rc04&name=天涯论坛&url=https://www.tianya.cn/m/"
+            title="天涯论坛"> 天涯论坛 </a> </li>
+
+        <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://server/?script=tianya&condition=find&cid=rc04&name=天涯-八卦&url=https://www.tianya.cn/m/find/bagua/index.shtml"
+            title="天涯-八卦"> 天涯-八卦 </a> </li>
+        <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://server/?script=tianya&condition=find&cid=rc04&name=天涯-国际&url=https://www.tianya.cn/m/find/guoji/index.shtml"
+            title="天涯-国际"> 天涯-国际 </a> </li>
+
       </ul>
     </section>
 
-    <section id="information">
-      <div class="pos-rel">
-        <h2 class="title-theme font-page"> 手机资讯<span class="title-icon bg-page"></span>
-        </h2>
-      </div>
-      <ul class="row com-border-btm">
-        <li class="line-between column3"> <a class="linkList-item font-fix"href="http://stat.hao.uc.cn/stat_site.php?nid=31569&amp;fcid=1624&amp;cid=1687&amp;pox=&amp;page=navi_online_pages"
-            title="新浪手机"> 新浪手机 </a> </li>
-        
-      </ul>
-    </section>
-
-    <section id="scienceTrend">
-      <div class="pos-rel">
-        <h2 class="title-theme font-page"> 科技潮流<span class="title-icon bg-page"></span>
-        </h2>
-      </div>
-      <ul class="row com-border-btm">
-        <li class="line-between column3"> <a class="linkList-item font-fix"href="http://stat.hao.uc.cn/stat_site.php?nid=31827&amp;fcid=1624&amp;cid=1691&amp;pox=&amp;page=navi_online_pages"
-            title="小米路由"> 小米路由 </a> </li>
-      </ul>
-    </section>
-
+    
     <div class="footer">
     </div>
   </body>

@@ -74,11 +74,24 @@
     line-height: 30px
 }
 
+.head-nav-itemf {
+    font-size: 14px;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    width: 24%;
+    height: 30px;
+    line-height: 30px
+}
+
 .head-nav-item>a {
     display: block;
     color: #fff
 }
-
+.head-nav-itemf>a {
+    display: block;
+    color: #fff
+}
 .head-bgimg {
     width: 100%;
     height: 110px
