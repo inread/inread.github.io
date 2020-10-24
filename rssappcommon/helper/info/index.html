@@ -13,9 +13,10 @@
 				var ual = navigator.language;
 				var baseLang = 'zh';
 				baseLang = ual ? ual.substring(0,2).toLowerCase() : "zh";
-				if(ual == 'zh-tw' ||
-				ual == 'zh-hk' ||
-				ual == 'zh-mo'){
+				if( ual&&(	ual == 'zh-tw' ||
+					ual == 'zh-hk' ||
+					ual == 'zh-mo')
+					){
 					lname = '幫助.md';
 					lname=escape(lname);
 				}else if(baseLang == 'zh'){
