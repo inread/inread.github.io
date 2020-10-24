@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"> 
+	</head>
+	<body>
+		<script>
+		var gurl='';
+		var ual = navigator.language;
+		var baseLang = 'zh';
+		baseLang = ual ? ual.substring(0,2).toLowerCase() : "zh";
+		if(baseLang == 'zh'){
+			gurl = '帮助.md';
+		}
+		else{
+			gurl = 'Helper.en';
+		}
+		window.location='./'+gurl;
+		</script>
+	</body>
+</html>
