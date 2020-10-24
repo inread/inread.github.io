@@ -28,12 +28,10 @@
 				}else{
 					gourl = location.href +'/'+ lname;
 				}
-
-				var mdviewerUrl = '../../../tools/mdViewer.html?url='+gourl;
+				var mdviewerUrl = '../../../tools/mdViewer.html?'+'url='+gourl;
 				var a = document.createElement('A');
                 a.href = mdviewerUrl;
                 mdviewerUrl = a.href;
-				//alert(mdviewerUrl);
 				location.href=mdviewerUrl;
 			} 
 

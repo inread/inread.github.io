@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-      <title></title>
+      <title>Markdown Viewer</title>
       <script id='MathJax-script' src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
       <script> MathJax = {              tex: {inlineMath: [['$', '$'], ['\(', '\)']]}            };       </script>
       <script id='MathJax-script' src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
@@ -15,7 +15,10 @@
 	  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     </head>
     <body>
-    	<script>
+        <script>
+            function updateTitle(t){
+                document.querySelector('head title').innerText=t;
+            }
       		function checkHighlight(){
                 document.querySelectorAll('pre code').forEach((block) => {
                     hljs.highlightBlock(block);
@@ -77,22 +80,55 @@
                 }
                 return rt;
             }
+            function getURLFilename(url){
+                var r=null;
+                try{
+                    var paths=url.split("//")[1].split("/");
+                    r=paths[paths.length-1].split(".")[0];
+                    if(r.length==0){
+                        r=null;
+                    }
+                }catch(e){}
+                return r;
+            }
 
         	function OnloadCheck(e){
                 try{
+                    var preTitle ="<#TITLE#>";
+                    if(preTitle.length>0 && ( 
+                        preTitle.length!=9 ||
+                        preTitle.startsWith('<#')==false
+                     ))
+                    {
+                        updateTitle(title);
+                    }
                     var pre64md ="<#TEMPLATE#>";
                     if (pre64md.length>50) {
                         upMdContent(pre64md,true);
                         return;
                     }
-                    var url= GetQueryString('url');
-                    if (url!=null) {
-                        downloadMd(url);
-                        return;
+                    var title= GetQueryString('title');
+                    if (title!=null) {
+                        if (title.length>0){
+                            updateTitle(title);
+                        }else{
+                            title=null;
+                        }
                     }
                     var txt= GetQueryString('text');
                     if (txt!=null) {
                         upMdContent(txt,false);
+                        return;
+                    }
+                    var url= GetQueryString('url');
+                    if (url!=null) {
+                        if(title==null){
+                           title= getURLFilename(url);
+                           if(title){
+                               updateTitle(title);
+                           }
+                        }
+                        downloadMd(url);
                         return;
                     }
                     var file= GetQueryString('file');
