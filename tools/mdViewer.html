@@ -85,17 +85,40 @@
         		});
         	}
 
-        	function GetQueryString(name)
+        	function GetQueryValue(name)
             {
                 var rc =null;
                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
                 var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
                 if(r!=null){
-                    rc = unescape(r[2]);
+                    rc = r[2];
                     console.log('url query '+name + '='+ rc);
                 }
                 return rc;
             }
+            function GetQueryString(name)
+            {
+                var v= GetQueryValue(name);
+                return  v!=null? unescape(v):v;
+            }
+            function GetQueryURL(name)
+            {
+                var r=null;
+                var v= GetQueryValue(name);
+                if (v==null){
+                    return r;
+                }
+                try{
+                    r=decodeURI(v);
+                }catch(e){
+
+                }
+                if(r==null){
+                    r=unescape(v);
+                }
+                return  r;
+            }
+
 
             function GetAbsoluteUrl(url) {
                 var rt = "";
@@ -146,7 +169,7 @@
                         upMdContent(txt,false);
                         return;
                     }
-                    var url= GetQueryString('url');
+                    var url= GetQueryURL('url');
                     if (url!=null) {
                         if(title==null){
                            title= getURLFilename(url);
@@ -157,7 +180,7 @@
                         downloadMd(url);
                         return;
                     }
-                    
+
                     var file= GetQueryString('file');
                     if (file!=null) {
                         file=GetAbsoluteUrl(file);
