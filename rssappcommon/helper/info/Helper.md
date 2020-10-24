@@ -1,78 +1,81 @@
 
 ## Introduction
 
-`RSS`是英文*Really Simple Syndication*的缩写，中文翻译叫**简易信息聚合**。
+`RSS` (*Really Simple Syndication*)
 
-准确的说，`RSS`仅仅是一种协议，或者说一种规范，规定了一套信息组合的规则，同样作用的协议还有`Atom`，关于两种协议的细节可以查阅以下文档：
+To be precise, `RSS' is simply a protocol, or specification, that defines a set of rules for combining information, as is `Atom', the details of which can be found in the following documents
 
-[RSS2.0协议](http://cyber.law.harvard.edu/rss/index.html)
+[RSS2.0](http://cyber.law.harvard.edu/rss/index.html)
 
-[Atom协议](http://www.ietf.org/rfc/rfc4287.txt)
+[Atom](http://www.ietf.org/rfc/rfc4287.txt)
 
-二者都是以XML格式作为信息聚合的组织标准，RSS2.0协议目前已经冻结，今后不会再做修改。Atom协议是改进版的RSS，今后仍有可能进行调整。
+Both use the XML format as an organizing standard for information aggregation, and the RSS 2.0 protocol is currently frozen and will not be modified in the future. the Atom protocol is an improved version of RSS and may still be adjusted in the future.
 
-## 订阅源
+## Feeds
 
-RSS和Atom协议提供的是数据组织的规范和标准，**订阅源**则是众多网站和博客将内容按照RSS或Atom等协议为用户提供的**标准化内容输出接口**，这些接口以URL（统一资源定位符）的形式公布在互联网上，使用HTTP协议访问，和普通的网址没有什么区别。当你使用一般的浏览器访问的时候，只能看到接口提供的XML原始数据，只有使用RSS阅读器订阅这些源，才能将其中的内容转换为多媒体网页进行浏览。
+RSS and Atom protocols provide specifications and standards for data organization, **subscription sources** are the **standardized content output interfaces** that many websites and blogs provide to their users in accordance with protocols such as RSS or Atom, which are published on the Internet in the form of URLs (Uniform Resource Locators) and accessed using the HTTP protocol, which are no different from ordinary web addresses. When you use a normal browser to access, you can only see the XML raw data provided by the interface, only use RSS readers to subscribe to these sources, you can convert the content into multimedia web pages to browse.
 
-例如下面是优质的订阅源**知乎每日精选**的URL
+E.g:
 
 ```
-https://www.zhihu.com/rss
+https://www.techmeme.com/feed.xml
 ```
 
-## 时效性
+## Timeliness
 
-和一般的网站一样，订阅源的URL会失效的，当一个订阅源突然断更，没有更新的文章提供的时候，请查看源网站rss链接是否可用。
+When a subscription source is suddenly out of order and no newer articles are available, please check if the rss link to the source site is available.
 
-订阅源并不提供旧文章的回查功能。从订阅开始后，只要不执行清除文章，你能看到一个区间的文章，更早的文章将无法查看。
+Subscription feeds do not provide a back-check for old articles. From the beginning of the subscription, you can see a range of articles as long as you don't perform a purge of the articles, older articles will not be viewable.
 
-## 全文订阅
+## Full text subscription
 
-再一次提到上面说的优秀源**知乎每日精选**，她是一个全文输出源，当你订阅她的时候，每一篇文章的全部内容她都会包装在订阅包中，在程序中中可以直接全文浏览内容。
+The **Feeds** of an excellent source will have a full text output source. When you subscribe to her, all the content of each article will be packaged in a subscription package, and you can browse the content directly in the program.
 
-但优秀的全文订阅源并不多，更多的订阅源采取的策略是摘要输出，而将全文留在了改源网站上，所以当你订阅了一些没办法看到全文，这个时候你可以尝试打开后台离线，这样程序在后台执行下载原文，然后通过**算法**获取最理想的离线原文。如果效果过不理想请告知我们，然后改进算法。后期会开发用户自定义离线原文部分。
+However, there are not many excellent full-text feeds. More feeds adopt the strategy of abstract output, and leave the full text on the modified source website.
 
-## 不合规矩
+## Original offline
+So when you subscribe to something and you can't see the full text, you can try to open the background offline, so that the program executes in the background to download the original text, and then get the most ideal full text through **algorithm**. If the effect is not satisfactory, please let us know and improve our algorithm.
 
-规矩是RSS和Atom协议定的，但也会有许多不合规矩的订阅源，这些源让我在做解析的时候会非常头疼。虽然我已经适应了很多特别订阅源的“不合规矩”，但仍不能保证能兼容全部的订阅源。
+## Non-compliance
 
-最显而易见的是时间戳格式问题，有些订阅源的时间格式不规范，会导致我无法正确解析文章发布的时间，从而无法按照时间对文章进行归类。如果有这种请求请联系我们，我会进行适配。
+The rules are negotiated between RSS and Atom, but there will also be many non-compliant feeds. These sources make me a headache when doing analysis. Although I have adapted to the "non-compliance" of many special feeds, I still cannot guarantee compatibility with all feeds.
 
-## 高级自定义订阅
+The most obvious problem is the timestamp format. The time format of some feeds is not standardized, which will cause me to be unable to correctly parse the time when the article was published, so I cannot classify the article according to the time. If you have such a request, please contact us and I will adapt it.
 
-对于你感兴趣的链接，如果你感兴趣，可以学习此方法，进行自定义订阅，脚本位置在**我的文件**的 **ParserScripte** 目录下。
-#### 订阅步骤
-- 通过订阅列表中选择**自定义订阅**。
-- 然后输入显示的**名称**。
-- 数据对应的链接**地址**，如果使用脚本中的请求中，将自动绑定，填入的链接将最为参考（保持唯一）。
-- 选择一个对应的**脚本**,文件名称为脚本名称（**demo.xml**）。
-- 选择解析链接返回数据的格式，包括xml,json,text,html 四种格式。
-- 绑定脚本中一个解析器，不选择将自动模式解析。
+## Advanced custom subscription
+
+For the links you are interested in, if you are interested, you can learn this method and make a custom subscription. The script location is in the **ParserScripte** directory of **My Documents**.
+#### Subscription steps
+-Select **Custom Subscription** from the subscription list.
+-Then enter the displayed **Name**.
+-The link **address** corresponding to the data will be automatically bound if used in the request in the script, and the filled-in link will be the most reference (keep it unique).
+-Select a corresponding **script**, the file name is the script name (**demo.xml**).
+-Choose the format of the data returned by the parse link, including four formats: xml, json, text, and html.
+-Bind a parser in the script, if it is not selected, the mode will be resolved automatically.
 
 
 ## Script
 
-文件名称为**脚本名称**，尽量简洁明了。
+The file name is **script name**, try to be concise and clear.
 
-## 根节点
+## Root node
 
-必须
-
+The following declaration is required:
 ```xml
 <site version="1.18" xmlns:feature="http://www.w3.org/1999/feature" xmlns:object="http://www.w3.org/1999/object" xmlns:parsers="http://www.w3.org/1999/parsers" xmlns:path="http://www.w3.org/1999/path" xmlns:request="http://www.w3.org/1999/request" xmlns:scope="http://www.w3.org/1999/scope" xmlns:src="http://www.w3.org/1999/src" xmlns:wrap="http://www.w3.org/1999/wrap" xmlns:page="http://www.w3.org/1999/page" xmlns:out="http://www.w3.org/1999/out" >
     <configure/>
 </site>
 ```
 
-## configure节点,保留
+## configure node, reserved
 
 ```xml
 <configure/>
 ```
 
-## 可选请求节点
-可以在topic下面添加定义的请求，保持alias不一样；
+## Optional request node
+You can add the defined request under the topic to keep the alias different;
+
 ```xml
  <feature:topic>
        <request alias="bbs" method="get" interval="18000" parser="mhome" range="{0,99}" value="https://mydomain.com/m/" type="html" />
@@ -80,68 +83,72 @@ https://www.zhihu.com/rss
    </feature:topic>
 ```
 
-### request 支持的属性
-用于请求数据，和返回结果数据解析的定义
-- alias，名称。
-- method，http/https 请求方法（get/post），不些默认get。
-- type， 请求返回数据对应的解析类型，包括html/xml/json/text。
-- value, 对应的请求链接。
-- interval， 请求间隔，不些将不限制。
-- parser， 名称对应 parsers:topic-> html(xml/json) -> condition:name 的值。
+### Request attributes supported
+Used to request data, and return the definition of the result data analysis
+-alias, name.
+-method, http/https request method (get/post), some default get.
+-type, the parse type corresponding to the data returned by the request, including html/xml/json/text.
+-value, the corresponding request link.
+-interval, request interval, some will not limit.
+-parser, the name corresponds to the value of parsers:topic->html(xml/json) -> condition:name.
 
-### condition 支持的属性
-解析器执行的**条件**
-- name，名称
-- scope， 表示文档的对应位置，有 doc/body/head/self 等
-- xpath， 从单前scope指定位置为root的xpath
-- express， 对获得结果进行表达式计算，值为指向 expresses>express name属性值，条件成立，执行子输出
+### Condition supported attributes
+**Condition** executed by the parser
+-name
+-scope, indicating the corresponding position of the document, such as doc/body/head/self
+-xpath, the xpath whose scope is specified as root from the previous order
+-express, perform expression calculation on the obtained result, the value points to the expresses>express name attribute value, the condition is met, and the sub-output is executed
 
 ```xml
 <condition equal="notnil" name="mhome" scope="body" xpath="//div[contains(@class,'news_list')]//ul/li">
 ```
 
+### Express supported attributes
+**Value** or **attribute value** for the node where the result of xpath is obtained, and **regular expression** for the value
+-name
+-scope, the location of the operation, attr means attribute, text means value, alltext means all text
+-keys, indicate the name of the attribute, multiple use | to separate
+-regex regular expression
+-Capture defaults to ‘1’, paired with regx
 
-### express 支持的属性
-对xpath获得结果的节点**取值**，或者**属性值**，对值在进行**正则表达式**取值
-- name，名称
-- scope， 操作的位置，attr表示属性,text表示值,alltext 表示所有的文本
-- keys，表示属性的名称，多个用|分割
-- regex 正则表达式
-- capture 默认为‘1’， 与regx 配对使用
+such as:
 
-比如：
 ```xml
 <express capture="1" keys="data-link|href" name="getTYThreadID" regex="-(\d+)-" scope="attr"/>
 ```
 
 
-### wrap:array 支持的属性
-取多个xpath的节点，然后对所有节点枚举，对每个节点处理，然后输出object:item
+### wrap:array supported attributes
+Take multiple xpath nodes, then enumerate all nodes, process each node, and output object:item
+
 ```xml
 <wrap:array scope="body" xpath="//div[@class='item']/a/..">
 ```
 
-### object:item 包括下面节点
-- title 文章标题 ， 必须
-- oid 文章链接或者对应唯一的当前站点id  
-- orignalurl 文章源链接 
-- request 文章请求链接 ， 必须
-- src 链接节点
-- src:referer 图片引用链接
-- author 文章作者
-- desc 文章摘要
-- parentoid 文章类别id
-- parenttitle 文章类别
-- from 来源
+### object:item includes the following nodes
+-title The title of the article, must
+-oid article link or corresponding unique current site id
+-orignalurl article source link
+-request article request link, must
+-src link node
+-src:referer image reference link
+-author Article author
+-desc article abstract
+-parentoid article category id
+-parenttitle article category
+-from source
 
-- wrap:images 支持的属性
-通过xpath取多个的图片节点，然后枚举，使用 image 来处理，输出image 对象
+- wrap:images Supported attributes
+
+Take multiple image nodes through xpath, then enumerate, use image to process, and output image objects.
+
 ```xml
 <wrap:images scope="self" xpath="//div[@class='list_img']/img">
 ```
-###  image 节点 属性
-- imagelayout，展示属性， 0 ，宽大于高度的图片； 1，宽小于高的图片； 2，显示三张图；  3 显示一张表示大图
 
+###  image attributes
+
+- imagelayout, display attributes, 0, the picture with width greater than height; 1, the picture with width less than height; 2, display three pictures; 3 display one large picture
 
 
 ## Demo.xml
