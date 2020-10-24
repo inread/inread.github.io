@@ -4,14 +4,12 @@
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
       <title>Markdown Viewer</title>
-      <!-- script> MathJax = {              tex: {inlineMath: [['$', '$'], ['\(', '\)']]}            };       </-script>
-      <script id='MathJax-script' src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script -->
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
       <script src="https://cdn.jsdelivr.net/npm/js-base64@3.5.2/base64.min.js"></script>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/default.min.css">
 	  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
 	  <script>hljs.initHighlightingOnLoad();</script>
-	  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-	  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     </head>
     <body>
         <script>
@@ -85,41 +83,28 @@
         		});
         	}
 
-        	function GetQueryValue(name)
+        	function GetQueryString(name)
             {
                 var rc =null;
                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
                 var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
                 if(r!=null){
-                    rc = r[2];
+                    rc=r[2];
+                    r=null;
+                    try{
+                        r=decodeURI(rc);
+                    }catch(e){}
+                    if(r==null){
+                        r=unescape(rc);
+                    }
+                    if(r!=null){
+                        rc=r;
+                    }
                     console.log('url query '+name + '='+ rc);
                 }
                 return rc;
             }
-            function GetQueryString(name)
-            {
-                var v= GetQueryValue(name);
-                return  v!=null? unescape(v):v;
-            }
-            function GetQueryURL(name)
-            {
-                var r=null;
-                var v= GetQueryValue(name);
-                if (v==null){
-                    return r;
-                }
-                try{
-                    r=decodeURI(v);
-                }catch(e){
-
-                }
-                if(r==null){
-                    r=unescape(v);
-                }
-                return  r;
-            }
-
-
+            
             function GetAbsoluteUrl(url) {
                 var rt = "";
                 if (url) {
@@ -169,7 +154,7 @@
                         upMdContent(txt,false);
                         return;
                     }
-                    var url= GetQueryURL('url');
+                    var url= GetQueryString('url');
                     if (url!=null) {
                         if(title==null){
                            title= getURLFilename(url);
