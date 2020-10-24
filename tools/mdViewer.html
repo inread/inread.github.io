@@ -65,7 +65,7 @@
                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
                 var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
                 if(r!=null){
-                    rc = unescape(r[2]);
+                    rc = decodeURI(r[2]);
                     console.log('url query '+name + '='+ rc);
                 }
                 return rc;
