@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8"/>
+      <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+      <title></title>
+      <script id='MathJax-script' src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+      <script> MathJax = {              tex: {inlineMath: [['$', '$'], ['\(', '\)']]}            };       </script>
+      <script id='MathJax-script' src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+      <script src="https://cdn.jsdelivr.net/npm/js-base64@3.5.2/base64.min.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/styles/default.min.css">
+	  <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@10.1.2/build/highlight.min.js"></script>
+	  <script>hljs.initHighlightingOnLoad();</script>
+	  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </head>
+    <body>
+    	<script>
+      		function checkHighlight(){
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
+            }
+            function axiosReady(){
+                try{
+                	checkHighlight();
+                }catch(e){
+                    console.log('axiosReady:'+e);
+                }
+            }
+            function upMdContent(c,base64=false){
+            	try{
+            		if (base64) {
+            			c =Base64.decode(c);
+            		}
+        			document.getElementById('zjmdb').innerHTML = marked(c); 
+        			setTimeout(function(){axiosReady();},0.2);
+        		}catch(e){
+        			console.log(e);
+        		}
+            }
+            
+        	function downloadMd(u){
+        		axios.get(u)
+        		.then(function (rs) {
+        			if (rs.status>=200 && rs.status<400 && rs.data) {
+        				try{
+        					upMdContent(rs.data); 
+        				}catch(e){
+        					console.log(e);
+        				}
+        			}
+        		})
+        		.catch(function (error) {
+        			console.log(error);
+        		});
+        	}
+
+        	function GetQueryString(name)
+            {
+                var rc =null;
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+                if(r!=null){
+                    rc = unescape(r[2]);
+                    console.log('url query '+name + '='+ rc);
+                }
+                return rc;
+            }
+
+            function GetAbsoluteUrl(url) {
+                var rt = "";
+                if (url) {
+                    var a = document.createElement('A');
+                    a.href = url;
+                    rt = a.href;
+                }
+                return rt;
+            }
+
+        	function OnloadCheck(e){
+                try{
+                    var pre64md ="<#TEMPLATE#>";
+                    if (pre64md.length>50) {
+                        upMdContent(pre64md,true);
+                        return;
+                    }
+                    var url= GetQueryString('url');
+                    if (url!=null) {
+                        downloadMd(url);
+                        return;
+                    }
+                    var txt= GetQueryString('text');
+                    if (txt!=null) {
+                        upMdContent(txt,false);
+                        return;
+                    }
+                    var file= GetQueryString('file');
+                    if (file!=null) {
+                        file=GetAbsoluteUrl(file);
+                        downloadMd(file,false);
+                        return;
+                    }
+                }catch(e){
+                    console.log('OnloadCheck:'+e);
+                }
+            }
+        	document.addEventListener('DOMContentLoaded', (event) => {
+                OnloadCheck();
+           	});
+
+        </script>
+    	<div id="zjmdb"></div>
+      	<script>
+      		
+       </script>
+    </body>
+</html>
