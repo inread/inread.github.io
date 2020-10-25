@@ -3,7 +3,7 @@
     <head>
       <meta charset="utf-8"/>
       <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-      <title>Markdown Viewer</title>
+      <title></title>
 
       <script src="https://cdn.bootcdn.net/ajax/libs/marked/1.20/marked.min.js"></script>
       <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.20.0/axios.min.js"></script>
@@ -195,6 +195,7 @@
                         console.log('will download url:'+ url);
                         return;
                     }
+                    updateTitle('Markdown Viewer');
                     completeLoading();
                 }catch(e){
                     console.log('OnloadCheck:'+e);
