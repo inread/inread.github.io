@@ -111,7 +111,7 @@
         		});
         	}
 
-        	function GetQueryString(name)
+        	function GetQueryString(name,isuri=false)
             {
                 var rc =null;
                 var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
@@ -119,9 +119,11 @@
                 if(r!=null){
                     rc=r[2];
                     r=null;
-                    try{
-                        r=decodeURIComponent(rc);
-                    }catch(e){}
+                    if(isuri){
+                        try{
+                            r=decodeURI(rc);
+                        }catch(e){}
+                    }
                     if(r==null){
                         r=unescape(rc);
                     }
