@@ -48,7 +48,6 @@
 				if(ual==null || ual.length<2){
 					ual = navigator.language;
 				}
-				alert(ual);
 				baseLang = ual ? ual.substring(0,2).toLowerCase() : "zh";
 				if( (ual!=null)&&(	ual == 'zh-tw' ||
 					ual == 'zh-hk' ||
@@ -56,7 +55,6 @@
 					){
 					lname = '幫助.md';
 					title ='幫助';
-					alert(title);
 				}else if(baseLang == 'zh'){
 					lname = '帮助.md';
 					title ='帮助';
