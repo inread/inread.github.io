@@ -34,7 +34,7 @@
                     if(r!=null){
                         rc=r;
                     }
-                    console.log('url query '+name + '='+ rc);
+                    //console.log('url query '+name + '='+ rc);
                 }
                 return rc;
             }
@@ -45,7 +45,7 @@
 				var baseLang = 'zh';
 				var title ='';
 				var ual = GetQueryString('lang');
-				if(qlan==nil || qlan.length<2){
+				if(ual==null || ual.length<2){
 					ual = navigator.language;
 				}
 				baseLang = ual ? ual.substring(0,2).toLowerCase() : "zh";
