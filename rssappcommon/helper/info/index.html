@@ -7,6 +7,9 @@
 	</head>
 	<body>
 		<script language="javascript" type="text/javascript" charset ='UTF-8'>
+			function updateTitle(t){
+                document.querySelector('head title').innerText=t;
+            }
 			function redirect() { 
 				var gourl='';
 				var lname ='';
@@ -28,6 +31,7 @@
 					lname = 'Helper.md';
 					title ='Helper';
 				}
+				updateTitle(title);
 				if(location.href.endsWith('index.html')){
 					gourl = location.href.substring(0, location.href.lastIndexOf('index.html')) + lname;
 				}else if(location.href.endsWith('/')){
