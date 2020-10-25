@@ -12,17 +12,21 @@
 				var lname ='';
 				var ual = navigator.language;
 				var baseLang = 'zh';
+				var title ='';
 				baseLang = ual ? ual.substring(0,2).toLowerCase() : "zh";
 				if( ual&&(	ual == 'zh-tw' ||
 					ual == 'zh-hk' ||
 					ual == 'zh-mo')
 					){
 					lname = '幫助.md';
+					title ='幫助';
 				}else if(baseLang == 'zh'){
 					lname = '帮助.md';
+					title ='帮助';
 				}
 				else{
 					lname = 'Helper.md';
+					title ='Helper';
 				}
 				if(location.href.endsWith('index.html')){
 					gourl = location.href.substring(0, location.href.lastIndexOf('index.html')) + lname;
@@ -32,7 +36,7 @@
 					gourl = location.href +'/'+ lname;
 				}
 				
-				var mdviewerUrl = '../../../tools/mdViewer.html?'+'url='+gourl;
+				var mdviewerUrl = '../../../tools/mdViewer.html?'+'title='+encodeURIComponent(title)+'&url='+ encodeURIComponent(gourl);
 				var a = document.createElement('A');
                 a.href = mdviewerUrl;
                 mdviewerUrl = a.href;
