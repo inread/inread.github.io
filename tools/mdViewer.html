@@ -23,17 +23,24 @@
 
         <script>
              function hideLoadError(e=null) {  
-                document.getElementById("mdloading").style.display="none";
+                document.getElementById("load_error").style.display="none";
             }
             function showLoadError(code)
             {
                 document.getElementById("error_code").innerText= code;
                 document.getElementById("load_error").style.display="block";
             }
-            function completeLoading(e=null) {  
-                if(e){
-                    showLoadError(e);
-                }else {hideLoadError();}
+            function completeLoading(e=null) { 
+                try{
+                    if(e!=null && (e.length>0 )){
+                        showLoadError(e);
+                    }
+                    else
+                    {
+                         hideLoadError();
+                    }
+                } catch(e){
+                }
                 document.getElementById("mdloading").style.display="none";
             }
             function showLoading()
@@ -110,8 +117,8 @@
                     }
         		})
         		.catch(function (error) {
-        			console.log('download error:'+error);
-                    completeLoading(error.message?error.message:'Download Error');
+        			console.log('download:'+error);
+                    completeLoading(error);
         		});
         	}
 
