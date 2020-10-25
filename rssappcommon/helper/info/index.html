@@ -39,12 +39,11 @@
 				}else{
 					gourl = location.href +'/'+ lname;
 				}
-				
-				var mdviewerUrl = '../../../tools/mdViewer.html?'+'title='+encodeURIComponent(title)+'&url='+ encodeURIComponent(gourl);
+				var mdviewerUrl = '../../../tools/mdViewer.html?'+'title='+title+'&url='+ gourl;
 				var a = document.createElement('A');
                 a.href = mdviewerUrl;
                 mdviewerUrl = a.href;
-				location.href=mdviewerUrl;// encodeURL(mdviewerUrl);
+				location.href=mdviewerUrl;
 			} 
 			setTimeout(redirect(), 100); 
 		</script>
