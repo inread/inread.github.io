@@ -12,12 +12,13 @@
                 document.querySelector('head title').innerText=t;
             }
 			function getDirUrl(){
-				if(location.href.endsWith('index.html')){
-					return location.href.substring(0, location.href.lastIndexOf('index.html'));
-				}else if(location.href.endsWith('/')){
-					return location.href ;
+				var baseUrl= location.protocol + '//'+location.host+location.pathname;
+				if(baseUrl.endsWith('index.html')){
+					return baseUrl.substring(0, baseUrl.lastIndexOf('index.html'));
+				}else if(baseUrl.endsWith('/')){
+					return baseUrl ;
 				}else{
-					return location.href +'/';
+					return baseUrl +'/';
 				}
 			}
 			function GetQueryString(name)
