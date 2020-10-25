@@ -17,9 +17,9 @@
 					ual == 'zh-hk' ||
 					ual == 'zh-mo')
 					){
-					lname = encodeURIComponent('幫助.md');
+					lname = '幫助.md';
 				}else if(baseLang == 'zh'){
-					lname = encodeURIComponent('帮助.md');
+					lname = '帮助.md';
 				}
 				else{
 					lname = 'Helper.md';
@@ -32,11 +32,11 @@
 					gourl = location.href +'/'+ lname;
 				}
 				
-				var mdviewerUrl = '../../../tools/mdViewer.html?'+'url='+gourl;
+				var mdviewerUrl = '../../../tools/mdViewer.html?'+'url='+encodeURIComponent(gourl);
 				var a = document.createElement('A');
                 a.href = mdviewerUrl;
                 mdviewerUrl = a.href;
-				location.href=mdviewerUrl;
+				location.href= mdviewerUrl;
 			} 
 			setTimeout(redirect(), 100); 
 		</script>
