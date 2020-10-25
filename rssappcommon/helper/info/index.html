@@ -20,12 +20,33 @@
 					return location.href +'/';
 				}
 			}
+			function GetQueryString(name)
+            {
+                var rc =null;
+                var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+                var r = window.location.search.substr(1).match(reg);//search,查询？后面的参数，并匹配正则
+                if(r!=null){
+                    rc=r[2];
+                    try{
+                        r=decodeURIComponent(rc);
+                    }catch(e){r=null;}
+                    if(r!=null){
+                        rc=r;
+                    }
+                    console.log('url query '+name + '='+ rc);
+                }
+                return rc;
+            }
+
 			function builderUrl() { 
 				var gourl='';
 				var lname ='';
-				var ual = navigator.language;
 				var baseLang = 'zh';
 				var title ='';
+				var ual = GetQueryString(lang);
+				if(qlan==nil || qlan.length<2){
+					ual = navigator.language;
+				}
 				baseLang = ual ? ual.substring(0,2).toLowerCase() : "zh";
 				if( ual&&(	ual == 'zh-tw' ||
 					ual == 'zh-hk' ||
