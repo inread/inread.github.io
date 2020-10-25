@@ -10,20 +10,37 @@
       <script src="https://cdn.bootcdn.net/ajax/libs/Base64/1.1.0/base64.min.js"></script>
       <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/10.2.1/styles/default.min.css" rel="stylesheet">
       <link href="loading.css" rel="stylesheet">
+      <link href="loaderror.css" rel="stylesheet">
     </head>
     <body>
         <div id='mdloading' class="loading">Loading&#8230;</div>
+        <div id='load_error' class="error-wall load-error" style ='display: none' >
+            <div class="error-container">
+                <h3>We have had an error</h3>
+                <h4 id='error_code'>Error 404</h4>
+            </div>
+        </div>
+
         <script>
-            //移除loading效果
-            function completeLoading(e=null) {  
+             function hideLoadError(e=null) {  
                 document.getElementById("mdloading").style.display="none";
             }
-            //展示loading效果
+            function showLoadError(code)
+            {
+                document.getElementById("error_code").innerText= code;
+                document.getElementById("load_error").style.display="block";
+            }
+            function completeLoading(e=null) {  
+                if(e){
+                    showLoadError(e);
+                }else {hideLoadError();}
+                document.getElementById("mdloading").style.display="none";
+            }
             function showLoading()
             {
+                hideLoadError();
                 document.getElementById("mdloading").style.display="block";
             }
-
             function setupLatex ()
             {
                 if (document.body.querySelector('math') ||
@@ -70,35 +87,31 @@
                 completeLoading();
             }
 
-            function upMdContent(c,base64=false){
+            function upMdContent(c,b64=false){
             	try{
-            		if (base64) {
-            			c =Base64.decode(c);
+            		if (b64) {
+            			c =b64.decode(c);
             		}
         			document.getElementById('zjmdb').innerHTML = marked(c); 
         		}catch(e){
         			console.log(e);
         		}
-                setTimeout(axiosReady,500);
+                setTimeout(axiosReady,200);
             }
             
         	function downloadMd(u){
         		axios.get(u)
         		.then(function (rs) {
         			if (rs.status>=200 && rs.status<400 && rs.data) {
-        				try{
-        					upMdContent(rs.data); 
-        				}catch(e){
-        					console.log('download catch:'+e);
-        				}
+        				upMdContent(rs.data); 
         			}else{
                         console.log('download status['+rs.status+'] invalid.');
-                        completeLoading();
+                        completeLoading("Error "+ s.status);
                     }
         		})
         		.catch(function (error) {
         			console.log('download error:'+error);
-                    completeLoading();
+                    completeLoading(error.message?error.message:'Download Error');
         		});
         	}
 
@@ -182,13 +195,6 @@
                         console.log('will download url:'+ url);
                         return;
                     }
-
-                    var file= GetQueryString('file');
-                    if (file!=null) {
-                        file=GetAbsoluteUrl(file);
-                        downloadMd(file,false);
-                        return;
-                    }
                     completeLoading();
                 }catch(e){
                     console.log('OnloadCheck:'+e);
@@ -197,7 +203,9 @@
         	document.addEventListener('DOMContentLoaded', (event) => {
                 OnloadCheck();
            	});
+
             showLoading();
+            
         </script>
     	<div id="zjmdb"></div>
     </body>
