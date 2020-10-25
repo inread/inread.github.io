@@ -76,10 +76,10 @@
             			c =Base64.decode(c);
             		}
         			document.getElementById('zjmdb').innerHTML = marked(c); 
-        			setTimeout(function(){axiosReady();},500);
         		}catch(e){
         			console.log(e);
         		}
+                setTimeout(function(){axiosReady();},500);
             }
             
         	function downloadMd(u){
@@ -89,12 +89,15 @@
         				try{
         					upMdContent(rs.data); 
         				}catch(e){
-        					console.log(e);
+        					console.log('download catch:'+e);
         				}
-        			}
+        			}else{
+                        console.log('download status['+rs.status+'] invalid.');
+                        completeLoading();
+                    }
         		})
         		.catch(function (error) {
-        			console.log(error);
+        			console.log('download error:'+error);
                     completeLoading();
         		});
         	}
