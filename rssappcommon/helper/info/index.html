@@ -36,7 +36,7 @@
 				var a = document.createElement('A');
                 a.href = mdviewerUrl;
                 mdviewerUrl = a.href;
-				location.href= encodeURL(mdviewerUrl);
+				location.href=mdviewerUrl;// encodeURL(mdviewerUrl);
 			} 
 			setTimeout(redirect(), 100); 
 		</script>
