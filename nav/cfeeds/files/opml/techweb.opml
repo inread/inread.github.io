@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<opml version="1">
+  <head>
+    <title>TechWeb</title>
+    <ownerName>Cliff</ownerName>
+    <ownerEmail>rssreadermate@foxmail.com</ownerEmail>
+    <createdBy>RSS Reader Mate for iOS</createdBy>
+    <dateCreated>Mon, 13 Jan 2020 11:51:17 GMT</dateCreated>
+  </head>
+  <body>
+    <outline text="TechWeb">
+    
+      <outline title="TechWeb 全站精华" xmlUrl="http://www.techweb.com.cn/rss/allnews.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb每日热点推荐" xmlUrl="http://www.techweb.com.cn/rss/hotnews.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb晚报" xmlUrl="http://www.techweb.com.cn/rss/evening.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      
+      <outline title="TechWeb 人物" xmlUrl="http://www.techweb.com.cn/rss/people.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 要闻" xmlUrl="http://www.techweb.com.cn/rss/focus.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 原创" xmlUrl="http://www.techweb.com.cn/rss/yuanchuang.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      
+      <outline title="TechWeb 移动互联" xmlUrl="http://www.techweb.com.cn/rss/mi.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 移动设备" xmlUrl="http://www.techweb.com.cn/rss/mo.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 移动应用" xmlUrl="http://www.techweb.com.cn/rss/app.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+    
+    
+      <outline title="TechWeb 电子商务" xmlUrl="http://www.techweb.com.cn/rss/ec.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 外电编译" xmlUrl="http://www.techweb.com.cn/rss/world.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 新酷网站" xmlUrl="http://www.techweb.com.cn/rss/newsite.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      
+      <outline title="TechWeb 网络" xmlUrl="http://www.techweb.com.cn/rss/internet.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 业界" xmlUrl="http://www.techweb.com.cn/rss/it.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 经营" xmlUrl="http://www.techweb.com.cn/rss/manage.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      
+      <outline title="TechWeb 财经" xmlUrl="http://www.techweb.com.cn/rss/finance.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 评论" xmlUrl="http://www.techweb.com.cn/rss/column.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 数据" xmlUrl="http://www.techweb.com.cn/rss/data.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      <outline title="TechWeb 游戏" xmlUrl="http://www.techweb.com.cn/rss/games.xml" htmlUrl="http://www.techweb.com.cn/" ex_icon="http://www.techweb.com.cn/xml.gif" type="rss"></outline>
+      
+    </outline>
+  </body>
+</opml>

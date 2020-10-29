@@ -5,7 +5,7 @@
       maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>订阅广场</title>
-    <link rel="stylesheet" href="./files/content.css">
+    <link rel="stylesheet" href="./com/css/content.css">
     <link rel="stylesheet" href="./com/css/header.css">
     <link rel="stylesheet" href="./com/css/linklist.css">
     <link rel="stylesheet" href="./com/css/iconlist.css">
@@ -38,13 +38,13 @@
       </div>
       <ul class="row com-border-btm">
         <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc01&desc=爱范儿&name=爱范儿&url=https://www.ifanr.com/feed" 
-            title="搜狐IT"> 爱范儿 </a> </li>
+            title="爱范儿"> 爱范儿 </a> </li>
         <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc27&name=捕蛇者说&url=https://pythonhunter.org/episodes/feed.xml" 
-            title="搜狐IT"> 捕蛇者说 </a> </li>
+            title="捕蛇者说"> 捕蛇者说 </a> </li>
         <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc27&name=阮一峰的网络日志&url=http://www.ruanyifeng.com/blog/atom.xml&icon=http://www.ruanyifeng.com/favicon.ico" 
-            title="搜狐IT"> 阮一峰的网络日志 </a> </li>
+            title="阮一峰的网络日志"> 阮一峰的网络日志 </a> </li>
         <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://rss/?cid=rc02&name=驱动之家&url=https://rss.mydrivers.com/rss.aspx?Tid=1" 
-            title="少数派"> 驱动之家 </a> </li>
+            title="驱动之家"> 驱动之家 </a> </li>
       </ul>
     </section>
 
@@ -54,11 +54,11 @@
       </div>
       <ul class="row com-border-btm">
         <li class="line-between column3"> <a class="linkList-item font-fix"href="./files/opml/华生论坛.opml" 
-            title="搜狐IT"> 华生论坛 </a> </li>
+            title="华生论坛"> 华生论坛 </a> </li>
         <li class="line-between column3"> <a class="linkList-item font-fix"href="./files/opml/环球网.opml" 
-            title="搜狐IT"> 环球网 </a> </li>
+            title="环球网"> 环球网 </a> </li>
         <li class="line-between column3"> <a class="linkList-item font-fix"href="./files/opml/chiphell.opml"
-            title="搜狐IT"> CHIPHELL论坛 </a> </li>
+            title="CHIPHELL论坛"> CHIPHELL论坛 </a> </li>
       </ul>
     </section>
 
@@ -69,7 +69,7 @@
       </div>
       <ul class="row com-border-btm">
         <li class="line-between column3"> <a class="linkList-item font-fix"href="feed://app/?condition=bbs_tianya&cid=rc04&desc=天涯论坛主页&name=天涯论坛主页&url=https://www.tianya.cn/m/"
-            title="中关村"> 天涯论坛主页 </a> </li>
+            title="天涯论坛主页"> 天涯论坛主页 </a> </li>
       </ul>
     </section>
 
@@ -105,9 +105,33 @@
         
       </ul>
     </section>
-
+    <section id="dynamic">
+      <div class="pos-rel">
+        <h2 class="title-theme font-page"> 脚本下载<span class="title-icon bg-page"></span>
+        </h2>
+      </div>
+      <ul class="row">
+          <!-- 下载url feed://dscript/?url -->
+          <li class="line-between column3"> <a class="linkList-item font-fix" href='javascript:void(0);' spath="./com/dscript/test.xml" onclick="gotoScriptURL(this)" title="天涯-鬼话"> 天涯-鬼话 </a> </li>
+      </ul>
+    </section>
     
     <div class="footer">
     </div>
+
+    <script>
+
+      function gotoScriptURL(e){
+
+            var path = e.getAttribute('spath');
+            var a=document.createElement('A');
+            a.href = path;
+            var dscriptUrl = 'feed://dscript/?url='+a.href;
+            //alert(dscriptUrl);
+            location.href=dscriptUrl;
+            
+      }
+    
+    </script>
   </body>
 </html>
