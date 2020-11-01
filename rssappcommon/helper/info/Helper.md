@@ -1,4 +1,4 @@
-﻿
+
 ## Introduction
 
 `RSS` (*Really Simple Syndication*)
@@ -33,9 +33,67 @@ The **Feeds** of an excellent source will have a full text output source. When y
 
 However, there are not many excellent full-text feeds. More feeds adopt the strategy of abstract output, and leave the full text on the modified source website.
 
-## Original offline
+
+## Offline original method
 So when you subscribe to something and you can't see the full text, you can try to open the background offline, so that the program executes in the background to download the original text, and then get the most ideal full text through **algorithm**. If the effect is not satisfactory, please let us know and improve our algorithm.
 
+
+## Custom script offline original text
+The significance of offline scripts is to customize some of the content that is needed, and exclude those that are not needed. The script file is a json format package. Use the syntax **XPath** and **Regular expression** ; The script is a json format file (extension name.json).
+
+
+### Include the following fields
+- description: mainly used for the description of the script;
+- parser: parse the trigger list;
+- match: The regular expression that matches the link of the article. Match and execute the following **wrap**
+- wrap: multiple analysis methods for the original content, and the results of multiple analysis methods will be merged
+- xpath: The content node of interest in the original text, the return can be multiple, one or all of them are controlled by index, and the results will be merged
+- index: the node index of the **XPath** result, a value of **0** means all; 1, 2... etc. correspond to one
+- excludeXPath: The excluded xpath node is an XPath array
+- excludeText: Exclude fields that appear in the content or characters matched by regular expressions
+
+```
+{
+    "description":
+    "parser":[
+        {
+            "match":"",
+            "wrap":[
+                {
+                    "xpath":"",
+                    "index":0,
+                    "excludeXPath":[
+
+                    ],
+                    "excludeText":[
+
+                    ]
+                },
+                {
+                    "xpath":"",
+                    "index":1,
+                    "excludeXPath":[
+
+                    ],
+                    "excludeText":[
+
+                    ]
+                }
+            ]
+        }
+        
+    ]
+}
+
+```
+ 
+- [XPath1.0](https://www.w3.org/TR/xpath10/)
+- [XPath2.0](https://www.w3.org/TR/xpath20/)
+- [Regex-Rubular](https://rubular.com/)
+- [Regular-Expressions](https://www.regular-expressions.info/)
+ 
+ 
+ 
 ## Non-compliance
 
 The rules are negotiated between RSS and Atom, but there will also be many non-compliant feeds. These sources make me a headache when doing analysis. Although I have adapted to the "non-compliance" of many special feeds, I still cannot guarantee compatibility with all feeds.
