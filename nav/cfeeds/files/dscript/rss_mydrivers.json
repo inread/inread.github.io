@@ -1,0 +1,19 @@
+{
+    "parser": [{
+        "match": "news.mydrivers.com\/(\\d+)/(\\d+)/(\\d+).htm",
+        "wrap": [{
+            "excludeText": ["ddd"],
+            "xpath": "\/\/div[@class='news_info']",
+            "excludeXPath": ["\/\/p[@class='bqian']"],
+            "index": 1
+        }]
+    }, {
+        "match": "m.mydrivers.com\/newsview\/(\\d+).html",
+        "wrap": [{
+            "xpath": "\/\/div[@id='content']",
+            "excludeXPath": ["\/\/ul[@style='list-style-type: none;'][contains(.,'访问')]"],
+            "excludeText": ["df", "zzzzddd"]
+        }]
+    }],
+    "description": "解析 pc： https:\/\/news.mydrivers.com\/1\/719\/719892.htm"
+}

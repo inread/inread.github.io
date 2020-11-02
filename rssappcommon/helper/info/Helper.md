@@ -39,7 +39,7 @@ So when you subscribe to something and you can't see the full text, you can try 
 
 
 ## Custom script offline original text
-The significance of offline scripts is to customize some of the content that is needed, and exclude those that are not needed. The script file is a json format package. Use the syntax **XPath** and **Regular expression** ; The script is a json format file (extension name.json).
+The significance of offline scripts is to customize some of the content that is needed, and exclude those that are not needed. The script file is a json format package. Use the syntax **XPath** and **Regular expression** ; The script is a json format file (extension name.json). Saved in the **OfflineScript** directory, multiple subscriptions can be shared.
 
 
 ### Include the following fields
@@ -81,7 +81,6 @@ The significance of offline scripts is to customize some of the content that is 
                 }
             ]
         }
-        
     ]
 }
 
@@ -92,6 +91,60 @@ The significance of offline scripts is to customize some of the content that is 
 - [Regex-Rubular](https://rubular.com/)
 - [Regular-Expressions](https://www.regular-expressions.info/)
  
+ 
+ ### news-domain-com.json
+  
+  ```
+  {
+      "parser": [{
+          "match": "news.domain.com\/(\\d+)/(\\d+)/(\\d+).htm",
+          "wrap": [{
+              "excludeText": ["ddd"],
+              "xpath": "\/\/div[@class='news_info']",
+              "excludeXPath": ["\/\/p[@class='bqian']"],
+              "index": 1
+          }]
+      }, {
+          "match": "m.domain.com\/newsview\/(\\d+).html",
+          "wrap": [{
+              "xpath": "\/\/div[@id='content']",
+              "excludeXPath": ["\/\/ul[@style='list-style-type: none;'][contains(.,'ad')]"],
+              "excludeText": [""]
+          }]
+      }],
+      "description": "parser, https:\/\/news.domain.com\/1\/719\/719892.htm"
+  }
+  
+  ```
+ 
+ ### [Commonly used regular expressions] (https://rubular.com/)
+
+ #### Regex quick reference
+
+ - [abc]    A single character of: a, b, or c
+ - [^abc]    Any single character except: a, b, or c
+ - [a-z]    Any single character in the range a-z
+ - [a-zA-Z]    Any single character in the range a-z or A-Z
+ - ^    Start of line
+ - $    End of line
+ - \A    Start of string
+ - \z    End of string
+ - .    Any single character
+ - \s    Any whitespace character
+ - \S    Any non-whitespace character
+ - \d    Any digit
+ - \D    Any non-digit
+ - \w    Any word character (letter, number, underscore)
+ - \W    Any non-word character
+ - \b    Any word boundary
+ - (...)    Capture everything enclosed
+ - (a|b)    a or b
+ - a?    Zero or one of a
+ - a*    Zero or more of a
+ - a+    One or more of a
+ - a{3}    Exactly 3 of a
+ - a{3,}    3 or more of a
+ - a{3,6}    Between 3 and 6 of a
  
  
 ## Non-compliance
@@ -125,7 +178,7 @@ The following declaration is required:
 </site>
 ```
 
-## configure node, reserved
+## **configure** node, reserved
 
 ```xml
 <configure/>
