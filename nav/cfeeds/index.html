@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./com/css/linklist.css">
     <link rel="stylesheet" href="./com/css/iconlist.css">
     <link rel="stylesheet" href="./com/css/footer.css">
+    <script type="javascript" src="./com/js/cfj.js"></script>
   </head>
   <body>
     <section id="head" class="head head-bg-page">
@@ -123,32 +124,18 @@
     </section>
     
  
-
     <section id="top">
       <div class="pos-rel">
         <h2 class="title-theme font-page"> 正文-离线脚本<span class="title-icon bg-page"></span></h2>
       </div>
       <ul class="row com-border-btm">
-        <li class="column1"> <a class="linkList-item " href="./files/olscript/rss_mydrivers.json" 
+        <li class="column1"> <a class="linkList-item " href='javascript:void(0);' onclick="gotoScriptURL(this,false)" spath="./files/olscript/rss_mydrivers.json" 
             title="驱动之家"> 驱动之家 </a> </li>
       </ul>
     </section>
 
-
-
     <div class="footer">
     </div>
 
-    <script>
-
-      function gotoScriptURL(e){
-            var path = e.getAttribute('spath');
-            var a=document.createElement('A');
-            a.href = path;
-            var dscriptUrl = 'feed://dscript/?url='+a.href;
-            location.href=dscriptUrl;
-      }
-    
-    </script>
   </body>
 </html>
