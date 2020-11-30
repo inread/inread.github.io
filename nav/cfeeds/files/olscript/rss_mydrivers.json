@@ -1,4 +1,4 @@
-{
+﻿{
     "parser": [{
         "match": "news.mydrivers.com\/(\\d+)/(\\d+)/(\\d+).htm",
         "wrap": [{
