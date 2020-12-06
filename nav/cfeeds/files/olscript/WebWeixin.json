@@ -1,0 +1,18 @@
+{
+    "parser": [{
+        "match": "mp.weixin.qq.com\/s?",
+        "wrap": [{
+            "excludeText": [],
+            "xpath": "\/\/div[@id='page-content']",
+            "excludeXPath": ["\/\/div[@id='js_sg_bar']","\/\/div[@id='js_comment_panel']","\/\/div[@id='js_like_toast']"
+                ,"\/\/div[@id='wow_close_inform']"
+                ,"\/\/div[@id='js_loading']"
+                ,"\/\/div[@id='activity-name']"
+                ,"\/\/div[@id='js_profile_qrcode']"
+                ,"\/\/div[@id='js_like_comment']","\/\/div[@id='js_toobar3']","\/\/div[@id='js_album_keep_read']","\/\/div[@id='js_hotspot_area']","\/\/div[@id='js_tags_preview_toast']"
+            ],
+            "index": 1
+        }]
+    }],
+    "description": "Parser Weixin Article： https:\/\/mp.weixin.qq.com\/s?src="
+}
