@@ -157,9 +157,44 @@
             title="萌宠"> 萌宠1 </a> </li>
       </ul>
     </section>
+    <section id="xinhua-dynamic">
+      <div class="pos-rel"><h2 class="title-theme font-page"> 新华网<span class="title-icon bg-page"></span></h2></div>
+      <ul class="row">
+        <li class="line-between column3"> <a class="linkList-item font-fix" href="feed://server/?script=xinhua&condition=home&request=新华网&ua=3g&cid=rc00&name=新华网&url=http://m.xinhuanet.com/"
+            title="新华网"> 新华网 </a> </li>
+        <li class="line-between column3"> <a class="linkList-item font-fix" href="feed://server/?script=xinhua&condition=world&request=新华国际&ua=3g&cid=rc00&name=新华国际&url=http://www.news.cn/worldpro/mobile.htm"
+            title="新华网"> 新华国际 </a> </li>
+        <li class="line-between column3"> <a class="linkList-item font-fix" href="feed://server/?script=xinhua&condition=jsdepth&request=深度聚焦-新华网&cid=rc00&name=深度聚焦-新华网&ptype=json&url=http://www.news.cn/json/xh_depth.js"
+            title="深度聚焦-新华网"> 深度聚焦-新华网 </a> </li>
+        <li class="line-between column3"> <a class="linkList-item font-fix" href="feed://server/?script=xinhua&condition=jsdepth&request=国际深度-新华网&cid=rc00&name=国际深度-新华网&ptype=json&url=http://www.news.cn/worldpro/json/xh_worldproDepth.js"
+            title="国际深度-新华网"> 国际深度-新华网 </a> </li>
+      </ul>
+    </section>
     
-
     <div class="footer">
     </div>
   </body>
+  <script>
+
+    var js= [
+    {s:"xinhua",n:"新华网",list:[
+        {request:"新华网",cid:"rc00",url:"http://m.xinhuanet.com/",ua:"3g"}
+
+    ]},
+    {}
+    ];
+     function addItem(config)
+     {
+         for(var i=0; i< config.length; i++){
+             var ce= config[i];
+             var ids= ce['s'];
+             var sitename =ce['n'];
+             var section_id = ids+'-dynamic';
+            
+         }
+
+     }
+    addItem(js);
+
+  </script>
 </html>
