@@ -2,7 +2,7 @@
     <configure/>
 
    <feature:topic>
-       <request alias="观察者网-要闻" interval="18000" parser="homehtml" range="{0,999}" value="https://m.guancha.cn/" agent="iphone" />
+       <!-- request alias="观察者网-要闻" interval="18000" parser="homehtml" range="{0,999}" value="https://m.guancha.cn/" agent="iphone" / -->
        <request alias="观察者网-要闻" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?id=homepage&amp;newstype=1&amp;page=1" parser ="hj124" type = "json"/>
        <request alias="观察者网-实评" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?id=homepage&amp;newstype=2&amp;page=1" parser ="hj124" type = "json"/>
        <request alias="观察者网-朋友圈" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?id=homepage&amp;newstype=3&amp;page=1" parser ="hj3" type = "json"/>
