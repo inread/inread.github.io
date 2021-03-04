@@ -1,0 +1,142 @@
+<site version="1.0" xmlns:feature="http://www.w3.org/1999/feature" xmlns:object="http://www.w3.org/1999/object" xmlns:parsers="http://www.w3.org/1999/parsers" xmlns:path="http://www.w3.org/1999/path" xmlns:request="http://www.w3.org/1999/request" xmlns:scope="http://www.w3.org/1999/scope" xmlns:src="http://www.w3.org/1999/src" xmlns:wrap="http://www.w3.org/1999/wrap" xmlns:page="http://www.w3.org/1999/page" xmlns:out="http://www.w3.org/1999/out" >
+    <configure/>
+
+   <feature:topic>
+       <request alias="观察者网-要闻" interval="18000" parser="homehtml" range="{0,999}" value="https://m.guancha.cn/" agent="iphone" />
+       <request alias="观察者网-要闻" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?id=homepage&amp;newstype=1&amp;page=1" parser ="hj124" type = "json"/>
+       <request alias="观察者网-实评" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?id=homepage&amp;newstype=2&amp;page=1" parser ="hj124" type = "json"/>
+       <request alias="观察者网-朋友圈" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?id=homepage&amp;newstype=3&amp;page=1" parser ="hj3" type = "json"/>
+       <request alias="观察者网-视频" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?id=homepage&amp;newstype=5&amp;page=1" parser ="hj5" type = "json"/>
+       <request alias="观察者网-滚动" interval="18000" value = "https://api.guancha.cn/Appdata/newslist.json?newstype=4&amp;page=1" parser ="hj124" type = "json"/>
+   </feature:topic>
+   
+   <parsers:topic>
+       <html>
+        <condition equal="notnil" name="homehtml" scope="body" xpath="//div[@class='swiper-wrapper']">
+            <out>
+                <group>
+                    <wrap:array scope="body" xpath="//div[@class='swiper-wrapper']//ul/li">
+                        <object:item>
+                            <request express="getLink" scope="self" xpath="//a/h3/.."/>
+                            <orignalurl express="getLink" scope="self" xpath="//a/h3/.."/>
+                            <oid express="getID" scope="self" xpath="//a/h3/.."/>
+                            <title express="getContent" scope="self" xpath="//a/h3"/>
+                            <from value="观察者网"/>
+                            <wrap:images scope="self" xpath="//a/img">
+                                <image>
+                                    <src express="getOriginalImageLink" scope="self" xpath="./"/>
+                                </image>
+                            </wrap:images>
+                            
+                        </object:item>
+                    </wrap:array>
+                </group>
+            </out>
+        </condition>
+    </html>
+        <json>
+            <condition name = "hj124" equal="notnil" scope="doc" xpath="/datas">
+                <out>
+                    <group>
+                        <wrap:array scope = "doc" xpath ="/datas">
+                            <object:item>
+                                <oid scope = "self" xpath = "/id" express = "getContent"/>
+                                <request base="https://m.guancha.cn/" value = "{{self.others.mu}}" />
+                                <title scope = "self" xpath = "/title" express = "getContent" />
+                                <desc scope = "self" xpath = "/summary" express = "getContent" />
+                                <author scope = "self" xpath = "/author/0/name" express = "getContent" />
+                                <from value="观察者网"/>
+                                <fromurl value="https://m.guancha.cn"/>
+                                <pdate scope="self" xpath="/news_time" express="getContent"/>
+                                <wrap:images scope="self" xpath="/pic_l">
+                                    <image>
+                                        <src express="getContent" scope="self" xpath="./"/>
+                                    </image>
+                                </wrap:images>
+                                <wrap:images scope="self" xpath="/pic">
+                                    <image>
+                                        <src express="getContent" scope="self" xpath="./"/>
+                                    </image>
+                                </wrap:images>
+                                <wrap:images scope="self" xpath="/preview_n">
+                                    <image>
+                                        <src express="getContent" scope="self" xpath="./"/>
+                                    </image>
+                                </wrap:images>
+                                <others>
+                                    <scope:self>
+                                        <path:mu scope = "self" xpath = "/mobile_url" express = "getContent" />
+                                        <path:mu scope = "self" xpath = "/http_url" express = "getContent" default="bcenil" />
+                                        <path:mu value = "{%if self.others.mu &gt; 0 and self.others.mu notcontainsstring &quot;https://&quot; %}https://m.guancha.cn/{{self.others.mu}}{%else%}{{self.others.mu}}{%/if%}" />
+                                    </scope:self>
+                                </others>
+                            </object:item>
+                        </wrap:array>
+                    </group>
+                </out>
+            </condition>
+            
+            <condition name = "hj3" equal="notnil" scope="doc" xpath="/datas">
+                <out>
+                    <group>
+                        <wrap:array scope = "doc" xpath ="/datas">
+                            <object:item>
+                                <oid scope = "self" xpath = "/id" express = "getContent"/>
+                                <request base="https://m.guancha.cn/" scope = "self" xpath = "/http_url" express = "getContent" />
+                                <title scope = "self" xpath = "/title" express = "getContent" />
+                                <parenttitle value="朋友圈"/>
+                                <from value="观察者网"/>
+                                <fromurl value="https://m.guancha.cn"/>
+                                <pdate scope="self" xpath="/news_time" express="getContent"/>
+                                <wrap:images scope="self" xpath="/pic_l">
+                                    <image>
+                                        <src express="getContent" scope="self" xpath="./"/>
+                                    </image>
+                                </wrap:images>
+                                <wrap:images scope="self" xpath="/pic">
+                                    <image>
+                                        <src express="getContent" scope="self" xpath="./"/>
+                                    </image>
+                                </wrap:images>
+                            </object:item>
+                        </wrap:array>
+                    </group>
+                </out>
+            </condition>
+            
+            <condition name = "hj5" equal="notnil" scope="doc" xpath="/datas">
+                <out>
+                    <group>
+                        <wrap:array scope = "doc" xpath ="/datas">
+                            <object:item>
+                                <oid scope = "self" xpath = "/id" express = "getContent"/>
+                                <request value = "https://m.guancha.cn/api/video/{{self.oid}}.shtml" />
+                                <title scope = "self" xpath = "/title" express = "getContent" />
+                                <parenttitle value="视频"/>
+                                <from value="观察者网"/>
+                                <fromurl value="https://m.guancha.cn"/>
+                                <pdate scope="self" xpath="/news_time" express="getContent"/>
+                                <wrap:images scope="self" xpath="/pic_l">
+                                    <image>
+                                        <src express="getContent" scope="self" xpath="./"/>
+                                    </image>
+                                </wrap:images>
+                                <wrap:images scope="self" xpath="/pic">
+                                    <image>
+                                        <src express="getContent" scope="self" xpath="./"/>
+                                    </image>
+                                </wrap:images>
+                            </object:item>
+                        </wrap:array>
+                    </group>
+                </out>
+            </condition>
+        </json>
+    </parsers:topic>
+    <expresses>
+        <express name = "getLink" scope = "attr"  keys = "href|data-link"/>
+        <express name="getContent" scope="text"/>
+        <express name="getID"  scope="attr" keys="data-link|href"  regex="(\d+_\d+_\d+_\d+).shtm" regex1="_(\d+).shtm"  />
+        <express name="getOriginalImageLink" scope="attr" keys="data-original|data-src|original|src" />
+    </expresses>
+</site>
