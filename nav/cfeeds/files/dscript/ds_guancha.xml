@@ -66,8 +66,9 @@
                                 <others>
                                     <scope:self>
                                         <path:mu scope = "self" xpath = "/mobile_url" express = "getContent" />
+                                        <path:mu value = "{%if self.others.mu notcontainsstring &quot;http&quot;%}https://m.guancha.cn/{{self.others.mu}}{%else%}{{self.others.mu}}{%/if%}" />
                                         <path:mu scope = "self" xpath = "/http_url" express = "getContent" default="bcenil" />
-                                        <path:mu value = "{%if self.others.mu &gt; 0 and self.others.mu notcontainsstring &quot;https://&quot; %}https://m.guancha.cn/{{self.others.mu}}{%else%}{{self.others.mu}}{%/if%}" />
+                                        <path:mu value = "{%if self.others.mu notcontainsstring &quot;http&quot; %}https://m.guancha.cn/{{self.others.mu}}{%else%}{{self.others.mu}}{%/if%}" />
                                     </scope:self>
                                 </others>
                             </object:item>
