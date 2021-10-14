@@ -1,0 +1,48 @@
+﻿<opml version="1.0">
+<head>
+<title>OsChina.NET</title>
+</head>
+<body>
+<outline title="开源中国社区-RSS" text="开源中国社区-RSS">
+	
+<outline text="最新开源项目" title="最新开源项目" type="rss" xmlUrl="https://www.oschina.net/project/rss" htmlUrl="https://www.oschina.net"/>
+<outline text="最新开源资讯" title="最新开源资讯" type="rss" xmlUrl="https://www.oschina.net/news/rss" htmlUrl="https://www.oschina.net"/>
+<outline text="最新问题列表" title="最新问题列表" type="rss" xmlUrl="https://www.oschina.net/question/rss" htmlUrl="https://www.oschina.net"/>
+<outline text="最新翻译列表" title="最新翻译列表" type="rss" xmlUrl="https://www.oschina.net/translate/rss" htmlUrl="https://www.oschina.net"/>
+<outline text="最新博客列表" title="最新博客列表" type="rss" xmlUrl="https://www.oschina.net/blog/rss" htmlUrl="https://www.oschina.net"/>
+<outline text="推荐博客列表" title="推荐博客列表" type="rss" xmlUrl="https://www.oschina.net/blog/rss?show=more" htmlUrl="https://www.oschina.net"/>
+<outline text="推荐软件列表" title="推荐软件列表" type="rss" xmlUrl="https://www.oschina.net/project/rss?show=recomms" htmlUrl="https://www.oschina.net"/>
+<outline text="最新代码分享列表" title="最新代码分享列表" type="rss" xmlUrl="https://www.oschina.net/code/rss" htmlUrl="https://www.oschina.net"/>
+<outline text="OSCHINA - 源码列表" title="OSCHINA - 源码列表" type="rss" xmlUrl="https://www.oschina.net/code/source_rss" htmlUrl="https://www.oschina.net"/>
+
+
+<outline text="OpenVINO 中文社区最新文章" title="OpenVINO 中文社区最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=openvino" htmlUrl="https://www.oschina.net"/>
+<outline text="大前端最新文章" title="大前端最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=cross-front" htmlUrl="https://www.oschina.net"/>
+<outline text="开发技能最新文章" title="开发技能最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=skill" htmlUrl="https://www.oschina.net"/>
+<outline text="数据库最新文章" title="数据库最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=database" htmlUrl="https://www.oschina.net"/>
+<outline text="云计算最新文章" title="云计算最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=cloud" htmlUrl="https://www.oschina.net"/>
+<outline text="飞桨专区最新文章" title="飞桨专区最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=paddlepaddle" htmlUrl="https://www.oschina.net"/>
+<outline text="HarmonyOS专区最新文章" title="HarmonyOS专区最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=harmonyos" htmlUrl="https://www.oschina.net"/>
+<outline text="开源治理最新文章" title="开源治理最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=osgovernance" htmlUrl="https://www.oschina.net"/>
+<outline text="程序人生最新文章" title="程序人生最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=programmer" htmlUrl="https://www.oschina.net"/>
+<outline text="软件架构最新文章" title="软件架构最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=architecture" htmlUrl="https://www.oschina.net"/>
+<outline text="行业趋势最新文章" title="行业趋势最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=trend" htmlUrl="https://www.oschina.net"/>
+<outline text="硬件 & IoT最新文章" title="硬件 & IoT最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=hardware-iot" htmlUrl="https://www.oschina.net"/>
+<outline text="AI & 大数据最新文章" title="AI & 大数据最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=ai-bigdata" htmlUrl="https://www.oschina.net"/>
+<outline text="PostgreSQL最新文章" title="PostgreSQL最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=postgresql" htmlUrl="https://www.oschina.net"/>
+<outline text="Linux基金会开源软件大学最新文章" title="Linux基金会开源软件大学最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=lfossu" htmlUrl="https://www.oschina.net"/>
+<outline text="OSCTraining最新文章" title="OSCTraining最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=OSCTraining" htmlUrl="https://www.oschina.net"/>
+<outline text="EdgeX 中文社区最新文章" title="EdgeX 中文社区最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=edgex-foundry" htmlUrl="https://www.oschina.net"/>
+<outline text="鲲鹏专区最新文章" title="鲲鹏专区最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=kunpeng" htmlUrl="https://www.oschina.net"/>
+<outline text="openEuler最新文章" title="openEuler最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=openEuler" htmlUrl="https://www.oschina.net"/>
+<outline text="信息安全最新文章" title="信息安全最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=cyber-security" htmlUrl="https://www.oschina.net"/>
+<outline text="运维最新文章" title="运维最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=ops" htmlUrl="https://www.oschina.net"/>
+<outline text="软件测试最新文章" title="软件测试最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=test" htmlUrl="https://www.oschina.net"/>
+<outline text="网络技术最新文章" title="网络技术最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=network" htmlUrl="https://www.oschina.net"/>
+<outline text="游戏开发最新文章" title="游戏开发最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=game" htmlUrl="https://www.oschina.net"/>
+<outline text="多媒体处理最新文章" title="多媒体处理最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=media" htmlUrl="https://www.oschina.net"/>
+<outline text="DevOps最新文章" title="DevOps最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=devops" htmlUrl="https://www.oschina.net"/>
+<outline text="区块链最新文章" title="区块链最新文章" type="rss" xmlUrl="https://www.oschina.net/groups/rss?ident=blockchain" htmlUrl="https://www.oschina.net"/>
+</outline>
+</body>
+</opml>
